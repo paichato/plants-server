@@ -1,36 +1,20 @@
 const express=require('express');
  const plantdata=require('./model/plantdata.json');
+ const paginate=require('./middleware/paginate')
 
 const app=express();
 
-const plantss=[{id:1,plant:"Micaia"},{id:2,plant:"Embondeiro"}]
+// app.use(paginate);
 
-// console.log(plantdata);
-app.get("/plants",(req,res)=>{
-    const _page=parseInt(req.query._page);
-    const _limit=parseInt(req.query._limit);
-    const startIndex=(_page-1)*_limit;
-    const endIndex=_page*_limit;
-    // const result=plantdata.plants.slice(startIndex,endIndex);
-console.log(_page);
-    const result={};
-   
-    if(endIndex<plantdata.plants.length){
-        result.next={
-            page:_page+1,
-            limit:_limit
-        };
-    };
-    if(startIndex>0){
-        result.previous={
-            page:_page-1,
-            limit:_limit,
-        };
-    }
-    result.results=(_page && _limit)?plantdata.plants.slice(startIndex,endIndex) :plantdata.plants ;
-   
-    res.json(result);
+
+
+app.get("/plants",paginate(plantdata.plants) ,(req,res)=>{
+
+    res.json(res.paginatedResult);
 })
+
+// app.post("/plant",paginate)
+
 
 
 app.listen(3000,()=>{
