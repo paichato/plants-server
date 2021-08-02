@@ -1,0 +1,3 @@
+# GET http://localhost:3000/plants
+
+GET http://localhost:3000/plants?page=1&limit=5
