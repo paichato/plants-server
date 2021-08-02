@@ -1,0 +1,9 @@
+{
+  "name": "plantsserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/paichato/plants-server.git",
+  "author": "Paichato <tsenane14@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
