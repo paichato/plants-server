@@ -5,5 +5,10 @@
   "repository": "https://github.com/paichato/plants-server.git",
   "author": "Paichato <tsenane14@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.12"
+  }
 }
