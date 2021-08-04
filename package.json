@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/paichato/plants-server.git",
-  "scripts": {"dev":"nodemon src/index.js"},
+  "scripts": {"dev":"nodemon src/index.js","start":"node src/index.js"},
   "author": "Paichato <tsenane14@gmail.com>",
   "license": "MIT",
   "private": false,
