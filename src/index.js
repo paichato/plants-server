@@ -13,7 +13,7 @@ app.get("/plants",paginate(plantdata.plants) ,(req,res)=>{
     res.json(res.paginatedResult);
 });
 
-app.get('plants_environments',(req,res)=>{
+app.get('/plants_environments',(req,res)=>{
     res.json(envs.plants_environments);
 })
 
